@@ -1,0 +1,143 @@
+EESchema Schematic File Version 4
+LIBS:LED_badge-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NPN_CBE Q1
+U 1 1 5C860F3D
+P 4200 3550
+F 0 "Q1" H 4391 3596 50  0000 L CNN
+F 1 "Q_NPN_CBE" H 4391 3505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4400 3650 50  0001 C CNN
+F 3 "~" H 4200 3550 50  0001 C CNN
+	1    4200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5C861104
+P 4300 3150
+F 0 "D1" V 4400 3300 50  0000 R CNN
+F 1 "LED_array_10" V 4400 3150 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_FlatTop" H 4300 3150 50  0001 C CNN
+F 3 "~" H 4300 3150 50  0001 C CNN
+	1    4300 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 3350 4300 3300
+$Comp
+L Device:R R1
+U 1 1 5C8624EB
+P 3500 3350
+F 0 "R1" H 3570 3396 50  0000 L CNN
+F 1 "10K" H 3570 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3430 3350 50  0001 C CNN
+F 3 "~" H 3500 3350 50  0001 C CNN
+	1    3500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C86256F
+P 3650 3000
+F 0 "R3" V 3443 3000 50  0000 C CNN
+F 1 "100ohm" V 3534 3000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3580 3000 50  0001 C CNN
+F 3 "~" H 3650 3000 50  0001 C CNN
+	1    3650 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 3000 3800 3000
+Wire Wire Line
+	3500 3000 3500 3200
+$Comp
+L Device:R R4
+U 1 1 5C862BD1
+P 3800 3550
+F 0 "R4" V 3593 3550 50  0000 C CNN
+F 1 "1K" V 3684 3550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3730 3550 50  0001 C CNN
+F 3 "~" H 3800 3550 50  0001 C CNN
+	1    3800 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 3550 3950 3550
+Wire Wire Line
+	3650 3550 3500 3550
+Wire Wire Line
+	3500 3550 3500 3500
+$Comp
+L Device:R_PHOTO R2
+U 1 1 5C86338B
+P 3500 3750
+F 0 "R2" H 3570 3796 50  0000 L CNN
+F 1 "R_PHOTO" H 3570 3705 50  0000 L CNN
+F 2 "OptoDevice:R_LDR_5.1x4.3mm_P3.4mm_Vertical" V 3550 3500 50  0001 L CNN
+F 3 "~" H 3500 3700 50  0001 C CNN
+	1    3500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3600 3500 3550
+Connection ~ 3500 3550
+Wire Wire Line
+	3500 3900 4300 3900
+Wire Wire Line
+	4300 3900 4300 3750
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5C864119
+P 2800 3450
+F 0 "BT1" H 2918 3546 50  0000 L CNN
+F 1 "Battery_Cell" H 2918 3455 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_104_1x23mm" V 2800 3510 50  0001 C CNN
+F 3 "~" V 2800 3510 50  0001 C CNN
+	1    2800 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3250 2800 3100
+Wire Wire Line
+	2800 3550 2800 3900
+Wire Wire Line
+	2800 3900 3500 3900
+Connection ~ 3500 3900
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5C8A4D9F
+P 3150 3100
+F 0 "SW1" H 3150 3385 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3150 3294 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3150 3100 50  0001 C CNN
+F 3 "" H 3150 3100 50  0001 C CNN
+	1    3150 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3000 3350 3000
+Connection ~ 3500 3000
+Wire Wire Line
+	2950 3100 2800 3100
+Wire Wire Line
+	3350 3200 3350 3300
+Wire Wire Line
+	3350 3300 2950 3300
+Wire Wire Line
+	2950 3300 2950 3100
+Connection ~ 2950 3100
+$EndSCHEMATC
