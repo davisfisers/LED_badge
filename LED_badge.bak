@@ -118,10 +118,10 @@ Wire Wire Line
 	2800 3900 3500 3900
 Connection ~ 3500 3900
 $Comp
-L Switch:SW_DPDT_x2 SW?
+L Switch:SW_DPDT_x2 SW1
 U 1 1 5C8A4D9F
 P 3150 3100
-F 0 "SW?" H 3150 3385 50  0000 C CNN
+F 0 "SW1" H 3150 3385 50  0000 C CNN
 F 1 "SW_DPDT_x2" H 3150 3294 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3150 3100 50  0001 C CNN
 F 3 "" H 3150 3100 50  0001 C CNN
@@ -133,4 +133,11 @@ Wire Wire Line
 Connection ~ 3500 3000
 Wire Wire Line
 	2950 3100 2800 3100
+Wire Wire Line
+	3350 3200 3350 3300
+Wire Wire Line
+	3350 3300 2950 3300
+Wire Wire Line
+	2950 3300 2950 3100
+Connection ~ 2950 3100
 $EndSCHEMATC
